@@ -12,15 +12,15 @@ import {
   Text,
   Events
 } from './ngx-time-scheduler.model';
-import * as moment_ from 'moment';
+import moment from 'moment';
 import {Subscription} from 'rxjs';
 
-const moment = moment_;
 
 @Component({
-  selector: 'ngx-ts[items][periods][sections]',
-  templateUrl: './ngx-time-scheduler.component.html',
-  styleUrls: ['./ngx-time-scheduler.component.css']
+    selector: 'ngx-ts[items][periods][sections]',
+    templateUrl: './ngx-time-scheduler.component.html',
+    styleUrls: ['./ngx-time-scheduler.component.css'],
+    standalone: false
 })
 export class NgxTimeSchedulerComponent implements OnInit, OnDestroy {
   @ViewChild('sectionTd') set SectionTd(elementRef: ElementRef) {
